@@ -22,18 +22,29 @@ elementFormDefault="qualified">
 					<xsd:attribute name="matricula" type="xsd:string" />
 			</xsd:complexType>
 		</xsd:element>
-	<xsd:element name="client">
 			<xsd:complexType>
 				<xsd:sequence>
-				<xsd:element name="telefon" maxOccurs="unbounded">
-				<xsd:element name="email" type="xsd:string" />
-				<xsd:element name="tipusClient" type="xsd:string" />
-				<xsd:element name="lloguer">
-			<xsd:complexType>
-				<xsd:sequence>
-				<xsd:element name="climatitzador" type="xsd:string"/>
-				<xsd:element name="airbagsLaterals" type="xsd:string" />
-				<xsd:element name="automatic" type="xsd:string"/>
+					<xsd:element name="client">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="telefon" maxOccurs="unbounded">
+									<xsd:element name="email" type="xsd:string" />
+									<xsd:element name="tipusClient" type="xsd:string" />
+									<xsd:element name="lloguer">
+							<xsd:complexType>
+						<xsd:sequence>
+						<xsd:element name="cotxe" type="xsd:string"/>
+						<xsd:element name="dataInici" type="xsd:string" />
+						<xsd:element name="dataFi" type="xsd:string"/>
+				</xsd:sequence>
+				<xsd:attribute name="dni" type="xsd:string" />
+				<xsd:attribute name="tractament" type="xsd:string" />
+			</xsd:complexType>
+		</xsd:element>
+
+
+
+
 		
 
 
