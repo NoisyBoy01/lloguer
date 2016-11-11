@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:"http://www.iessonferrer.net/jgonzalez/lloguer"
 targetNamespace="http://www.iessonferrer.net/jgonzalez/lloguer"
 elementFormDefault="qualified">
 <xsd:element name="lloguer">
@@ -29,13 +30,21 @@ elementFormDefault="qualified">
 							<xsd:sequence>
 								<xsd:element name="telefon" maxOccurs="unbounded">
 									<xsd:element name="email" type="xsd:string" />
-									<xsd:element name="tipusClient" type="xsd:string" />
-									<xsd:element name="lloguer">
-							<xsd:complexType>
+									<xsd:element name="tipusClient">
+								<xsd:simpleType>
+								<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="Habitual" />
+								<xsd:enumeration value="Ocasional" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+
+				<xsd:element name="lloguer">
+					<xsd:complexType>
 						<xsd:sequence>
-						<xsd:element name="cotxe" type="xsd:string"/>
-						<xsd:element name="dataInici" type="xsd:string" />
-						<xsd:element name="dataFi" type="xsd:string"/>
+							<xsd:element name="cotxe" type="xsd:string"/>
+							<xsd:element name="dataInici" type="xsd:string" />
+							<xsd:element name="dataFi" type="xsd:string"/>
 				</xsd:sequence>
 				<xsd:attribute name="dni" type="xsd:string" />
 				<xsd:attribute name="tractament" type="xsd:string" />
